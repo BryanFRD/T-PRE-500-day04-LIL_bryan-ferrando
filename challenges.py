@@ -20,7 +20,7 @@ def vigenere(string: str, key: str, decrypt: bool = False) -> str:
     t = ""
     for i in range(0, len(string)):
       c = string[i]
-      k = ord(key[i%len(key)]) if not decrypt else -ord(key[i%len(key)])
+      k = ord(key[i%len(key)]) * (-1 if decrypt else 1)
       a = ord('A' if c.isupper() else 'a')
       if(c.isalpha()):
         t += chr((ord(c) - a + k) % 26 + a)

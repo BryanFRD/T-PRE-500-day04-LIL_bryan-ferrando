@@ -58,4 +58,4 @@ for i in range(2, int(ipt5/2)+1):
 i=int(input("Number: "))
 s=input("String: ")
 if(i != 0):
-  print(i if set("aeiou").intersection(s) else i if i>=42 else s)
+  print(i if set("aeiouy").intersection(s) else i if i>=42 else s)
